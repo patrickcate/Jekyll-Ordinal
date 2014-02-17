@@ -11,7 +11,7 @@ __NOTE:__ Because [GitHub Pages](http://pages.github.com/) disables the use of a
 
 ## Usage
 
-To use the filter, simply pass a date such as `page.date` or `post.date` and the filter will return the ordinal for that day.
+To use the filter, simply pass a date string such as `page.date` or `post.date` and the filter will return the ordinal for that day.
 
 ```ruby
 {{ page.date | ordinal }}
