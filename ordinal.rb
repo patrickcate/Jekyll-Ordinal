@@ -11,21 +11,21 @@
 # Returns the ordinal String.
 
 module Jekyll
-	module Ordinal
-		def ordinal(date)
-			day = date.strftime("%-d");
-			case day
-			when "1", "21", "31";
-				"st"
-			when "2", "22";
-				"nd"
-			when "3", "23";
-				"rd"
-			else
-				"th"
-			end
-		end
-	end
+  module Ordinal
+    def ordinal(date)
+      day = Date.parse(date).strftime("%-d");
+      case day
+      when "1", "21", "31";
+        "st"
+      when "2", "22";
+        "nd"
+      when "3", "23";
+        "rd"
+      else
+        "th"
+      end
+    end
+  end
 end
 
 Liquid::Template.register_filter(Jekyll::Ordinal)
